@@ -1,18 +1,27 @@
 {
   "name": "sort-lib",
   "version": "1.0.1",
-  "description": "",
+  "description": "A small set of utilities for writing more readable sort functions",
   "type": "module",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "files": [
     "dist/"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build:esm": "tsc",
+    "build:cjs": "tsc -p tsconfig-cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
     "prepublish": "npm run build"
   },
-  "keywords": [],
+  "keywords": ["sort", "helpers", "utilities"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
