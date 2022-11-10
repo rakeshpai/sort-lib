@@ -1,6 +1,6 @@
 {
   "name": "sort-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small set of utilities for writing more readable sort functions",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -21,7 +21,11 @@
     "build": "npm run build:esm && npm run build:cjs",
     "prepublish": "npm run build"
   },
-  "keywords": ["sort", "helpers", "utilities"],
+  "keywords": [
+    "sort",
+    "helpers",
+    "utilities"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
